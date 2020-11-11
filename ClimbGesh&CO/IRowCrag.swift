@@ -11,7 +11,7 @@ struct IRowCrag: View {
     let crag: Crag
     
     var body: some View {
-        NavigationLink(destination: ListRowsRoutes(routes: crag.routes) ) {
+        NavigationLink(destination: ListRowsRoutes(routes: crag.routes, crag: crag) ) {
         Text(crag.cragName)
         }
     }

@@ -13,10 +13,7 @@ struct ListRowsLocations: View {
     var body: some View {
 
         List(locations) { location in
-//            NavigationLink(destination: Text("experiment")) {
             IRowLocation(location: location)
-                
-//        }
         }
         
     }

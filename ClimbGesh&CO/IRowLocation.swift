@@ -11,11 +11,12 @@ struct IRowLocation: View {                 //this is individual row FROM the li
     let location: ClimbingLocation          // create, this property help us capture the data sent from ContentView
     
     var body: some View {
-        NavigationLink(destination: ListRowsCrags(crags: location.crags) ) {
+        NavigationLink(destination: ListRowsCrags(crags: location.crags, location: location) ) {
         VStack {
             Text(location.name)
         }
         }
+        
     }
 }
 
