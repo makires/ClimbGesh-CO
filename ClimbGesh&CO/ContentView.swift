@@ -7,10 +7,19 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    // добавим свойство которое будем передавать другим вью
+    // add property will be the message (it is our data) we will be passing to SecondView
+    let data: [ClimbingLocation] = Bundle.main.decode("climb.json")
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            
+            ListRowsLocations(locations: data)
+    
+            .navigationBarTitle("ClimbGesh")
+        }
     }
 }
 
